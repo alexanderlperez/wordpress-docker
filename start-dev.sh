@@ -17,4 +17,4 @@ echo "MySQL loaded, loading Wordpress"
 
 docker stop ${PREFIX}-wordpress
 docker rm ${PREFIX}-wordpress
-docker run --name wordpress -itd -p 8080:80 --link mysql:mysql -v `pwd`/theme:/var/www/html/wp-content/themes/theme -v `pwd`/uploads:/var/www/html/wp-content/uploads -e WORDPRESS_DEBUG=true ${PREFIX}-compcon
+docker run --name wordpress -itd -p 8888:80 --link ${PREFIX}-mysql:mysql -v `pwd`/themes:/var/www/html/wp-content/themes -v `pwd`/uploads:/var/www/html/wp-content/uploads -e WORDPRESS_DEBUG=true ${PREFIX}-wordpress
