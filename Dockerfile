@@ -8,6 +8,5 @@ run apt-get update
 # update deb repo
 run apt-get install -y gnupg sudo vim
 run curl -sL https://deb.nodesource.com/setup_8.x | bash -
-run apt-get install -y nodejs
 
 
